@@ -70,7 +70,7 @@ It’s a great starting point for beginners and a solid codebase to build on for
 
 **Mehmed Mehmedov**  
 Computer Science Graduate  
-GitHub: [github.com/mdxo3]
+GitHub: [](https://github.com/mdxo3)
 
 ---
 
