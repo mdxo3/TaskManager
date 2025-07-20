@@ -1,5 +1,3 @@
-
-
 # 📝 TaskManager MVC App
 
 A full-featured task management web application built using **ASP.NET Core MVC (.NET 8)** and **Entity Framework Core**.  
@@ -63,10 +61,8 @@ It’s a great starting point for beginners and a solid codebase to build on for
 ## ❓ Where to Get Help
 
 - Open an issue or discussion on this repo
-- Contact me on LinkedIn: [Mehmed Mehmedov](www.linkedin.com/in/m-mehmedov
-
-- 
-- Email: mdxo3@hotmail.com
+- Contact me on LinkedIn: [Mehmed Mehmedov](https://linkedin.com)
+- Email: your.email@example.com
 
 ---
 
@@ -74,7 +70,7 @@ It’s a great starting point for beginners and a solid codebase to build on for
 
 **Mehmed Mehmedov**  
 .NET Developer | Computer Science Graduate  
-GitHub: [github.com/your-username]((https://github.com/mdxo3)
+GitHub: [github.com/your-username](https://github.com/your-username)
 
 ---
 
@@ -89,7 +85,60 @@ GitHub: [github.com/your-username]((https://github.com/mdxo3)
 
 ---
 
+## 📸 Demo Preview
+
+Below are some screenshots showcasing the TaskManager app:
+
+![Register Page](Screenshots/register.png)  
+*User registration page for creating a new account.*
+
+![Login Page](Screenshots/login.png)  
+*Login interface for secure user authentication.*
+
+![Reset Password](Screenshots/reset_password.png)  
+*Form for resetting a user's password.*
+
+![Forgot Password Confirmation](Screenshots/forgot_password_confirmation.png)  
+*Confirmation screen after requesting a password reset.*
+
+![Main Page](Screenshots/main_page.png)  
+*Main task list view with all tasks displayed.*
+
+![Create Task](Screenshots/create_task.png)  
+*Form for creating a new task with priority and deadline fields.*
+
+![Create Task Alternate](Screenshots/create_task_2.png)  
+*Alternate view of the task creation form.*
+
+![Main Page Alternate](Screenshots/main_page_2.png)  
+*Alternate view of the main task list.*
+
+![Filter Options](Screenshots/filter.png)  
+*Interface for filtering tasks by status or other criteria.*
+
+![Filtered Results](Screenshots/filtered_results.png)  
+*Task list showing results after applying filters.*
+
+![Sort Options](Screenshots/sort.png)  
+*Interface for sorting tasks by deadline, creation date, or priority.*
+
+![Sorted Results](Screenshots/sorted_results.png)  
+*Task list showing results after applying sorting.*
+
+![Completed Task](Screenshots/completed_task.png)  
+*View of a task marked as completed.*
+
+![Edit Task](Screenshots/edit.png)  
+*Inline editing feature for quick task updates.*
+
+![Task Details](Screenshots/details.png)  
+*Detailed view of a specific task.*
+
+![Delete Task](Screenshots/delete.png)  
+*Confirmation prompt for deleting a task.*
+
+---
+
 ## 📜 License
 
 This project is licensed under the **MIT License** — free to use, improve, and adapt.
-
