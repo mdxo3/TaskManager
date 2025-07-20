@@ -61,16 +61,16 @@ It’s a great starting point for beginners and a solid codebase to build on for
 ## ❓ Where to Get Help
 
 - Open an issue or discussion on this repo
-- Contact me on LinkedIn: [Mehmed Mehmedov](https://linkedin.com)
-- Email: your.email@example.com
+- Contact me on LinkedIn: [Mehmed Mehmedov](https://linkedin.com/in/mdxo3)
+- Email: mdxo3@hotmail.com
 
 ---
 
 ## 👥 Who Maintains This Project
 
 **Mehmed Mehmedov**  
-.NET Developer | Computer Science Graduate  
-GitHub: [github.com/your-username](https://github.com/your-username)
+Computer Science Graduate  
+GitHub: [github.com/your-username](https://github.com/mdxo3)
 
 ---
 
@@ -135,7 +135,7 @@ Below are some screenshots showcasing the TaskManager app:
 *Detailed view of a specific task.*
 
 ![Delete Task](Screenshots/delete.png)  
-*Confirmation prompt for deleting a task.*
+*Deleting a task.*
 
 ---
 
