@@ -1,0 +1,111 @@
+﻿@model IEnumerable<TaskManagerApi.Models.TaskItem>
+
+@{
+    ViewData["Title"] = "Task List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">Your Tasks</h2>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">➕ Create Task</a>
+</div>
+
+<form method="get" asp-action="Index" class="row g-2 mb-4">
+    <div class="col-md-3">
+        <select name="filter" class="form-select">
+            <option value="">-- Filter by --</option>
+            <option value="completed">Completed</option>
+            <option value="incomplete">Incomplete</option>
+            <option value="overdue">Overdue</option>
+            <option value="upcoming">Upcoming</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <select name="sort" class="form-select">
+            <option value="">-- Sort by --</option>
+            <option value="priority">Priority</option>
+            <option value="deadline">Deadline</option>
+            <option value="created">Created Date</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-outline-secondary w-100">Apply</button>
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <p class="text-muted">You don't have any tasks yet.</p>
+}
+else
+{
+    <table class="table table-hover align-middle">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Priority</th>
+                <th>Deadline</th>
+                <th>Created</th>
+                <th>Completed At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                var rowClass = task.IsCompleted ? "text-decoration-line-through text-muted" : "";
+
+                <tr class="@rowClass" data-task-id="@task.Id">
+                    <td class="text-center">
+                        <input type="checkbox" class="complete-checkbox" @(task.IsCompleted ? "checked" : "") />
+                    </td>
+                    <td>@task.Title</td>
+                    <td>@task.Priority</td>
+                    <td>
+                        @(task.Deadline.HasValue? task.Deadline.Value.ToShortDateString() : "—")
+                    </td>
+                    <td>@task.CreatedAt.ToShortDateString()</td>
+                    <td>
+                        @(task.CompletedAt.HasValue? task.CompletedAt.Value.ToShortDateString() : "—")
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Details" asp-route-id="@task.Id" class="btn btn-sm btn-info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@task.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section Scripts {
+    <script>
+        document.querySelectorAll(".complete-checkbox").forEach(box => {
+            box.addEventListener("change", async function () {
+                const row = this.closest("tr");
+                const taskId = row.dataset.taskId;
+                const isCompleted = this.checked;
+
+                const response = await fetch(`/TaskItems/ToggleComplete/${taskId}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "RequestVerificationToken": document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                    },
+                    body: JSON.stringify(isCompleted)
+                });
+
+                if (response.ok) {
+                    row.classList.toggle("text-decoration-line-through", isCompleted);
+                    row.classList.toggle("text-muted", isCompleted);
+                } else {
+                    alert("Failed to update task status.");
+                    this.checked = !isCompleted; // revert
+                }
+            });
+        });
+    </script>
+}

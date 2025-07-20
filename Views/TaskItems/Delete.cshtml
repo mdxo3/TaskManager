@@ -1,0 +1,30 @@
+﻿@model TaskManagerApi.Models.TaskItem
+
+@{
+    ViewData["Title"] = "Delete Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4 text-danger">🗑️ Delete Task</h2>
+
+<h5 class="mb-3">Are you sure you want to permanently delete this task?</h5>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Title</dt>
+    <dd class="col-sm-9">@Model.Title</dd>
+
+    <dt class="col-sm-3">Priority</dt>
+    <dd class="col-sm-9">@Model.Priority</dd>
+
+    <dt class="col-sm-3">Deadline</dt>
+    <dd class="col-sm-9">
+        @(Model.Deadline.HasValue? Model.Deadline.Value.ToShortDateString() : "—")
+    </dd>
+</dl>
+
+<form asp-action="DeleteConfirmed" method="post" class="mt-4 d-flex gap-2">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">🗑️ Confirm Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">⬅️ Back to List</a>
+</form>
