@@ -63,8 +63,10 @@ It’s a great starting point for beginners and a solid codebase to build on for
 ## ❓ Where to Get Help
 
 - Open an issue or discussion on this repo
-- Contact me on LinkedIn: [Mehmed Mehmedov](https://linkedin.com)
-- Email: your.email@example.com
+- Contact me on LinkedIn: [Mehmed Mehmedov](www.linkedin.com/in/m-mehmedov
+
+- 
+- Email: mdxo3@hotmail.com
 
 ---
 
@@ -72,7 +74,7 @@ It’s a great starting point for beginners and a solid codebase to build on for
 
 **Mehmed Mehmedov**  
 .NET Developer | Computer Science Graduate  
-GitHub: [github.com/your-username](https://github.com/your-username)
+GitHub: [github.com/your-username]((https://github.com/mdxo3)
 
 ---
 
@@ -84,12 +86,6 @@ GitHub: [github.com/your-username](https://github.com/your-username)
 - SQLite
 - Bootstrap 5
 - AJAX (for inline UI updates)
-
----
-
-## 📸 Demo Preview
-
-*(You can add screenshots or a link to a video walkthrough here)*
 
 ---
 
